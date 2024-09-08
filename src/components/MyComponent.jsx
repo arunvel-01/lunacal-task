@@ -17,6 +17,7 @@ function MyComponent() {
             file&gt; Here are the official instructions:
             <br />
             <br />
+            <br />
             <ol className="list-decimal list-inside">
               <li>
                 Keep the left half of the screen empty (but it should be
@@ -35,6 +36,7 @@ function MyComponent() {
             </ol>
             <br />
             Assignment will be scored based on the below parameters:
+            <br />
             <br />
             <br />
             <ol className="list-decimal list-inside">

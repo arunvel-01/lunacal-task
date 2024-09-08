@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import VerticalDots from "./VerticalDots";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function GalleryWidget() {
   const [images, setImages] = useState([
@@ -42,20 +44,20 @@ function GalleryWidget() {
           alt=""
         />
         <div className="flex items-center justify-center h-full mt-20">
-        <VerticalDots />
+          <VerticalDots />
         </div>
       </div>
       <div className="flex overflow-hidden flex-col grow shrink-0 py-px basis-0 w-fit max-md:max-w-full">
         <div className="w-full max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
-            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <h2 className="self-stretch px-10 py-4 my-auto w-full text-xl font-medium text-white whitespace-nowrap rounded-3xl bg-neutral-900 max-md:px-5 max-md:mt-10">
+            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full mt-1 mb-4">
+              <h2 className="self-stretch px-10 py-4 my-auto w-full text-xl font-medium text-white whitespace-nowrap rounded-2xl bg-neutral-900 max-md:px-5 max-md:mt-10">
                 Gallery
               </h2>
             </div>
             <div className="flex flex-col ml-5 w-[67%] max-md:ml-0 max-md:w-full">
-              <div className="flex gap-5 justify-between w-full text-xs font-extrabold leading-none text-center text-white uppercase max-md:mt-10">
-                <label className="flex gap-1 px-7 py-4 my-auto bg-white bg-opacity-0 rounded-[104px] shadow-[0px_0px_7px_rgba(255,255,255,0.25)] max-md:px-5 cursor-pointer">
+              <div className=" mt-4 mb-4 gap-1 flex  justify-between w-full text-xs font-extrabold leading-none text-center text-white uppercase max-md:mt-10">
+                <label className="flex gap-1 px-7 py-4 my-auto ml-16 bg-white bg-opacity-0 rounded-[104px] shadow-[0px_0px_7px_rgba(255,255,255,0.25)] max-md:px-5 cursor-pointer">
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e7efb6190fa2342c01586d5a7e0d44ab52ae8fd2d1beeae71670768905ff351?placeholderIfAbsent=true&apiKey=375b726090f04c04b88c9e1ddb85a83f"
@@ -70,28 +72,18 @@ function GalleryWidget() {
                     onChange={handleAddImage}
                   />
                 </label>
-                 <div>
-                 <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8dc16635cf6478bc6ce1a01b4c951f6a9de37668579a3c13e915f1ed3c722348?placeholderIfAbsent=true&apiKey=375b726090f04c04b88c9e1ddb85a83f"
-                  className="object-contain shrink-0 max-w-full aspect-[0.89] w-[102px] rotate-180"
-                  alt=""
-                />
+                <div className=" mt-4 mb-4 ml-2 flex items-center justify-center w-12 h-12 rounded-full bg-zinc-800 cursor-pointer">
+                 <ArrowBackIcon style={{ fontSize: 30, color: 'grey' }} />
                  </div>
-                 <div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8dc16635cf6478bc6ce1a01b4c951f6a9de37668579a3c13e915f1ed3c722348?placeholderIfAbsent=true&apiKey=375b726090f04c04b88c9e1ddb85a83f"
-                  className="object-contain shrink-0 max-w-full aspect-[0.89] w-[102px]"
-                  alt=""
-                />
+                 <div className=" mt-4 mb-4 mr-6 flex items-center justify-center w-12 gap-0 h-12 rounded-full bg-zinc-800 cursor-pointer" >
+                 <ArrowForwardIcon style={{ fontSize: 30, color: 'grey' }} />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="mt-3 mr-5 max-md:mr-2.5 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
+          <div className="flex gap-5 max-md:flex-col mb-2">
             {images.map((image, index) => (
               <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                 <img

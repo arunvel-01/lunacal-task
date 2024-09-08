@@ -8,7 +8,16 @@ function ProfileWidget() {
 
   // Tab data with labels and content
   const tabs = [
-    { label: "About Me", content: "Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now. I was born and raised in Albany, NY & have been living in Santa Carla for the past 10 years with my wife Tiffany and my 4-year-old twin daughters—Emma and Ella." },
+    { 
+      label: "About Me", 
+      content: (
+        <>
+          Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now. 
+          <br /><br /> 
+          I was born and raised in Albany, NY & have been living in Santa Carla for the past 10 years with my wife Tiffany and my 4-year-old twin daughters—Emma and Ella.
+        </>
+      ) 
+    },
     { label: "Experiences", content: "I have 10 years of experience in sales, with a focus on customer relationship management and B2B sales. At Salesforce, I specialize in helping businesses streamline their sales processes using our suite of tools." },
     { label: "Recommended", content: "Here are some resources I highly recommend: 'The Challenger Sale' by Matthew Dixon, and 'Salesforce Essentials' by Marc Benioff." }
   ];
@@ -27,7 +36,7 @@ function ProfileWidget() {
         </div>
       </div>
       <div className="flex flex-col max-md:max-w-full">
-        <nav className="flex flex-col justify-center px-1.5 py-2 w-full text-lg font-medium leading-none text-center text-gray-400 rounded-3xl bg-neutral-900 max-md:max-w-full">
+        <nav className="flex flex-col justify-center px-1.5 py-2 w-full text-left font-medium leading-none text-gray-400 rounded-3xl bg-neutral-900 max-md:max-w-full">
           <div className="flex py-0 px-0 relative gap-2 items-center max-md:max-w-full">
             {tabs.map((tab, index) => (
               <TabButton
