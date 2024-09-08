@@ -32,4 +32,8 @@ npm run test
 
 ## Show your support
 
+<<<<<<< HEAD
 Give a ⭐️ if this project helped you!
+=======
+Give a ⭐️ if this project helped you!
+>>>>>>> d51cd1fd7ef59361e41158f470a94972cec5892f
